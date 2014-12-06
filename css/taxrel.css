@@ -1,0 +1,107 @@
+#taxrel > ul > li {
+  color:blue;
+  display:none;
+}
+
+#taxrel > ul > li > ul > li {
+  color:red;
+  display:none;
+}
+
+#taxrel {
+  display:block;
+  width:100%;
+  height:700px;
+}
+
+svg {
+  background-color: #FFF;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg:not(.active):not(.ctrl) {
+  /*cursor: crosshair;*/
+}
+
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.75px;
+  /*cursor: default;*/
+}
+
+svg:not(.active):not(.ctrl) path.link {
+  /*cursor: pointer;*/
+}
+
+path.link.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+  pointer-events: none;
+}
+
+path.link.hidden {
+  stroke-width: 0;
+}
+
+circle {
+  z-index:1;
+}
+
+circle.node {
+  fill: #555;
+  stroke: #FFF';
+  stroke-width: 1;
+}
+
+circle.node.selected {
+  fill: #FFF;
+  stroke: #555;
+  stroke-width: 3;
+}
+
+text.label {
+  font: 12px sans-serif;
+  text-anchor: middle;
+  fill: #1397d3;
+  font-weight:bold;
+  cursor: pointer;
+  text-shadow:1px 1px 1px white,
+              -1px 1px 1px white,
+              1px -1px 1px white,
+              -1px -1px 1px white,
+              2px 2px 2px white,
+              -2px 2px 2px white,
+              2px -2px 2px white,
+              -2px -2px 2px white;
+}
+
+text.label.hover {
+  //fill:#444;
+  font-size:16px;
+}
+
+text.label.tag {
+  fill:#888;
+}
+
+text.selected {
+  font-size: 20px;
+  /*fill:#444;*/
+}
+
+text.selected.hover {
+  /*fill:#1397d3;*/
+  font-size:20px;
+}
+
+svg .selected {
+  z-index:150;
+}
